@@ -1,0 +1,444 @@
+@charset "UTF-8";
+
+/*
+cream #FFF8e9 (255, 248, 233)
+blue # 394F5E (57,79,94)
+dark orange #B94531 (185, 69, 49)
+*/
+
+html {
+    box-sizing: border-box;
+}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    color: #394F5E;
+    background-color: #FFF8e9;
+}
+
+h1 {
+    font: bold 2em Times, serif;
+    color: white !important;
+    text-shadow: .05em .05em .1em gray;
+    text-align: center;
+    font-size: 370%;
+}
+
+h2 {
+    font: bold 1.2em Times, serif;
+    text-transform: uppercase;
+    color: #B94531;
+    letter-spacing: .4em;
+    text-align: center;
+}
+
+dt {
+    font-weight: bold;
+    color: #394F5E;
+}
+
+/* nav style */
+
+.main_nav {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    background-color: navy;
+    padding: .3em;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+.main_nav a {
+    color: beige;
+    padding: 60px 40px;
+    text-decoration: none;
+}
+
+.main_nav a:hover {
+   background-color: #FFF8e9;
+    color: navy;
+}
+
+li.logo {
+    margin-right: auto;
+}
+
+.button {
+    background-color: navy;
+    border: none;
+    color: white;
+    display: inline-block;
+    font-size: 18px;
+    margin: 3px 7px;
+    padding: 20px 40px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+   
+}
+
+.button:hover { 
+    background-color: navy;
+    transform: scale(1.05);
+}
+
+/* hero image */
+
+.hero_image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(images/coffee_shop.jpg);
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.hero_header {
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: left;
+    position: absolute;
+    color: white;
+    top: 40%;
+    text-shadow: .05em .05em .1em black;
+    font-size: 3em;
+    margin: 20px;
+}
+
+.hero_text {
+    text-align: left;
+    position: absolute;
+    color: white;
+    top: 50%;
+    margin: 20px;
+    text-shadow: .05em .05em .1em black;
+    font-size: large;
+}
+
+
+/* grid index */
+
+
+
+#index_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-areas: 
+    'problem    problem     problem'
+    'img1       img1        img1'
+    'hlight1    hlight2     hlight3'
+    'about      about       about'
+    'product1   product2    product3'
+    'review     review      review';
+    background-color: #FFF8e9;
+}
+
+#problem {
+    grid-area: problem;
+    object-fit: cover;
+}
+
+#img1 {
+    grid-area: img1;
+    object-fit: cover;
+}
+
+#hlight1 {
+    grid-area: hlight1;
+    object-fit: cover;
+}
+
+#hlight2 {
+    grid-area: hlight2;
+    object-fit: cover;
+}
+
+#hlight3 {
+    grid-area: hlight3;
+    object-fit: cover;
+}
+
+#about {
+    grid-area: about;
+    object-fit: cover;
+}
+
+#product1 {
+    grid-area: product1;
+    object-fit: cover;
+}
+
+#product2 {
+    grid-area: product2;
+    object-fit: cover;
+}
+
+#product3 {
+    grid-area: product3;
+    object-fit: cover;
+}
+
+#review {
+    grid-area: review;
+    object-fit: cover;
+}
+
+/* index grid style */
+
+#problem, #review {
+    margin: 0px 15px 0px 30px;
+    padding: 60px 0px 60px 0px;
+}
+
+#hlight1, #hlight2, #hlight3 {
+    margin: 20px;
+}
+
+#product1, #product2, #product3 {
+    margin: 40px;
+}
+
+#about {
+    margin: 80px;
+}
+
+#img1 {
+    padding: 0px 0px 80px 0px;
+}
+
+/* img gallery flexbox */
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+p, h3 {
+    text-align: center;
+    margin: 0px 0px 10px 0px;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+/* menu grid */
+
+#menu_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    'coffee tea'
+    'muffin fruit';
+    background-color: #FFF8e9;
+}
+
+/* menu grid style */
+
+#coffee {
+    grid-area: coffee;
+
+}
+
+#tea {
+    grid-area: tea;
+}
+
+#muffin {
+    grid-area: muffin;
+}
+
+#fruit {
+    grid-area: fruit;
+}
+
+#price {
+    color: sienna;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-left: 20px;
+}
+
+/* other */
+
+footer {
+    background-color: rgb(57, 79, 94);
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+}
+
+
+/* media qeury */
+
+/* when screen is 900px or larger [computer] */
+
+@media screen and (min-width: 900px) {
+    body {
+       font-weight: bold;
+       font-size: larger;
+    }
+    
+#index_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-areas: 
+    'problem    problem     problem'
+    'img1       img1        img1'
+    'hlight1    hlight2     hlight3'
+    'about      about       about'
+    'product1   product2    product3'
+    'review     review      review';
+    background-color: #FFF8e9;
+
+    background-color: #FFF8e9;
+    justify-items: center;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+.hero_header {
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: left;
+    position: absolute;
+    color: white;
+    top: 40%;
+    text-shadow: .05em .05em .9em black;
+    font-size: 50px;
+    margin: 20px 20px;
+}
+
+.hero_text {
+    text-align: left;
+    position: absolute;
+    color: white;
+    top: 50%;
+    margin: 20px;
+    text-shadow: .05em .05em .9em black;
+    font-size: 19px;
+}
+
+}
+
+/* when screen is 800 and smaller [tablet]*/
+
+@media screen and (max-width: 800px) {
+    body {
+        font-weight: bold;
+        font-size: larger;
+    }
+    #index_container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto auto auto auto auto auto auto;
+            grid-template-areas: 
+            ' problem    problem '    
+            ' img1       img1    '
+            ' hlight1    hlight2 '
+            ' hlight3    hlight3 '
+            ' about      about   '
+            ' product1   product2'
+            ' product3   product3'
+            ' review     review  ';
+            background-color: #FFF8e9;
+            justify-items: center;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+
+    .hero_header {
+            font-family:Arial, Helvetica, sans-serif;
+            text-align: left;
+            position: absolute;
+            color:red;
+            top: 40%;
+            text-shadow: .05em .05em .9em black;
+            font-size: 35px;
+            margin: 20px 20px;
+        }
+        
+    .hero_text {
+            text-align: left;
+            position: absolute;
+            color: white;
+            top: 50%;
+            margin: 20px;
+            text-shadow: .05em .05em .9em black;
+            font-size: 16px;
+        }
+        
+    }
+        
+   
+
+    /* when screen is 500 and smaller [phone] */
+
+    @media screen and (max-width: 500px) {
+        body {
+           font-weight: bold;
+           font-size: medium;
+        }
+        #index_container {
+                display: grid;
+                grid-template-columns: 1fr ;
+                grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
+                grid-template-areas: 
+                ' problem  '    
+                ' img1     '
+                ' hlight1  ' 
+                'hlight2   '
+                ' hlight3  '
+                ' about    '
+                ' product1 '  
+                'product2  '
+                ' product3 '
+                ' review   ';
+                background-color: #FFF8e9;
+                justify-items: center;
+                margin: 0 2px;
+                max-width: 1200px;
+            }
+
+       .hero_header {
+                font-family:Arial, Helvetica, sans-serif;
+                text-align: left;
+                position: absolute;
+                color: white;
+                top: 40%;
+                text-shadow: .05em .05em .9em black;
+                font-size: 38px;
+                margin: 20px 20px;
+            }
+            
+        .hero_text {
+                text-align: left;
+                position: absolute;
+                color: white;
+                top: 50%;
+                margin: 20px;
+                text-shadow: .05em .05em .9em black;
+                font-size: 16px;
+            }
+            
+        }
+
+    
